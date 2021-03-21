@@ -9,7 +9,7 @@ import java.util.Scanner;
 import com.saarathi.ConnectionProvider;
 
 public class TripPlannerService {
-	static Connection c=ConnectionProvider.connectionProvider().con;
+	static Connection c=ConnectionProvider.getConnectionProvider();
 	static Scanner scan= new Scanner(System.in);
 	public void showTripPlan() throws SQLException {
 		String query = "select * from trip_planner";

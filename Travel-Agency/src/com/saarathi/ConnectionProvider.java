@@ -1,35 +1,33 @@
 package com.saarathi;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-
+import java.sql.*;
 
 public class ConnectionProvider {
-	static private ConnectionProvider singletonInstance;
-	public static Connection con=null;
+	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+	static private Connection singletonInstance=null;
+	static final String password = "devil";
 	
-	private ConnectionProvider() {
-
-		try{  
-			Class.forName("com.mysql.jdbc.Driver");  
-		    con=DriverManager.getConnection( "jdbc:mysql://localhost:3306/travel-agency","root","Tiger"); 
-		    System.out.println("connection etablished");
-		}catch (SQLException e) {
+	static {
+		try {
+			singletonInstance= DriverManager.getConnection("jdbc:mysql://localhost:3306/travel-agency","root",password);
+			System.out.println("conection done");
+		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}  
-		
+		}
 	}
 	
-	public static synchronized ConnectionProvider connectionProvider() {
-		if(null==singletonInstance) {
-			singletonInstance=new ConnectionProvider();
+	public static Connection getConnectionProvider() {
+		if(singletonInstance!=null) {
+			return singletonInstance;
+		}else {
+			System.out.println("single connection is not created");
 		}
 		return singletonInstance;
 	}
+	@Override
+     protected Object clone() throws CloneNotSupportedException{
+    	 throw new CloneNotSupportedException("No clones allowed!!");
+     }
 	
 }

@@ -22,7 +22,6 @@ public class CustomerController {
 		String email=scanner.next();
 		System.out.println("enter password:");
 		String password=scanner.next();
-		loginValidationService.customerLogin(email, password);
 		
 		int option=0;
 		do {
