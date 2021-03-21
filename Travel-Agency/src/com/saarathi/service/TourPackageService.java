@@ -13,7 +13,7 @@ import com.saarathi.beans.RouteTrip;
 import com.saarathi.beans.TourPackage;
 
 public class TourPackageService {
-	static Connection c=ConnectionProvider.connectionProvider().con;
+	static Connection c=ConnectionProvider.getConnectionProvider();
 	
 	public void showTourPackages() throws SQLException {
 		List<TourPackage> tourPackages=new ArrayList<TourPackage>();

@@ -12,7 +12,7 @@ import com.saarathi.beans.RouteTrip;
 
 
 public class RouteTripService {
-	static Connection c=ConnectionProvider.connectionProvider().con;
+	static Connection c=ConnectionProvider.getConnectionProvider();
 
 	public void showRouteTrip() throws SQLException {
 		List<RouteTrip> routeTrips=new ArrayList<RouteTrip>();
