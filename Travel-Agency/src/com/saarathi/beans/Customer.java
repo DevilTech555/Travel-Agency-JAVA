@@ -7,14 +7,17 @@ public class Customer {
 	private String custName;
 	private Date dob;
 	private String email;
+	private String password;
 	private String phno;
 	private String address;
-	public Customer(int custId, String custName, Date dob, String email, String phno, String address) {
+	
+	public Customer(int custId, String custName, Date dob, String email, String password, String phno, String address) {
 		super();
 		this.custId = custId;
 		this.custName = custName;
 		this.dob = dob;
 		this.email = email;
+		this.password = password;
 		this.phno = phno;
 		this.address = address;
 	}
@@ -44,6 +47,13 @@ public class Customer {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	public String getPhno() {
 		return phno;

@@ -1,5 +1,8 @@
 package com.saarathi.beans;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class RouteTrip {
 	private int routeId;
 	private String routeName;
@@ -10,6 +13,7 @@ public class RouteTrip {
 	private double pricing;
 	private int seat_availability;
 	private int tripPlannerId;
+
 	public RouteTrip(int routeId, String routeName, String from, String to, String departure, String arrival,
 			double pricing, int seat_availability, int tripPlannerId) {
 		super();
