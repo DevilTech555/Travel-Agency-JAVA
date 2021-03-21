@@ -15,12 +15,11 @@ public class Driver {
 		int choice = scan.nextInt();
 		switch(choice) {
 		case 1:
-//			System.out.println("Enter Admin password");
-//			String adminPassword=scan.next();
+			break;
 		case 2: 
 			CustomerController customerController = new CustomerController();
 			customerController.menuList();
-			
+			break;
 		}
 	}
 
