@@ -12,6 +12,7 @@ public class ConnectionProvider {
 			singletonInstance= DriverManager.getConnection("jdbc:mysql://localhost:3306/travel-agency","root",password);
 			System.out.println("conection done");
 		} catch (SQLException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
