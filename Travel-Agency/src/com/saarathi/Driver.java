@@ -1,14 +1,11 @@
 package com.saarathi;
 
-import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Scanner;
-
 import com.saarathi.controller.CustomerController;
-import com.saarathi.service.TripPlannerService;
+
 
 public class Driver {
-	public static Connection c=ConnectionProvider.connectionProvider().con;
 	static Scanner scan= new Scanner(System.in);
 	public static void main(String[] args) throws SQLException {
 		
@@ -25,9 +22,6 @@ public class Driver {
 			customerController.menuList();
 			
 		}
-		
-//		 TripPlannerService tripPlannerService = new TripPlannerService();
-//		 tripPlannerService.showTripPlan();
 	}
 
 }

@@ -7,10 +7,9 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 import com.saarathi.ConnectionProvider;
 import com.saarathi.beans.RouteTrip;
-import com.saarathi.beans.TourPackage;
+
 
 public class RouteTripService {
 	static Connection c=ConnectionProvider.connectionProvider().con;
